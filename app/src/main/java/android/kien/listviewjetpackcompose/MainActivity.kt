@@ -35,6 +35,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+                    ColumnList(listItem = listItem)
                 }
             }
         }
@@ -67,9 +68,9 @@ fun ColumnList(listItem: List<Item>){
     LazyColumn {
         items(listItem){
             listItem -> Box(
-                Modifier
-                    .padding(5.dp)
-                    .border(width = 1.dp, color = Color.Black)
+            Modifier
+                .padding(5.dp)
+                .border(width = 1.dp, color = Color.Black)
             ){
                 ItemRow(listItem)
             }
@@ -79,13 +80,13 @@ fun ColumnList(listItem: List<Item>){
 
 var listItem = mutableListOf(
     Item("Banana", 78.7, R.drawable.ic_launcher_background),
-    Item("Banana", 78.7, R.drawable.ic_launcher_background),
-    Item("Banana", 78.7, R.drawable.ic_launcher_background),
-    Item("Banana", 78.7, R.drawable.ic_launcher_background),
-    Item("Banana", 78.7, R.drawable.ic_launcher_background),
-    Item("Banana", 78.7, R.drawable.ic_launcher_background),
-    Item("Banana", 78.7, R.drawable.ic_launcher_background),
-    Item("Banana", 78.7, R.drawable.ic_launcher_background)
+    Item("Apple", 78.7, R.drawable.ic_launcher_background),
+    Item("Chicken", 78.7, R.drawable.ic_launcher_background),
+    Item("Potato", 78.7, R.drawable.ic_launcher_background),
+    Item("Orange", 78.7, R.drawable.ic_launcher_background),
+    Item("Lime", 78.7, R.drawable.ic_launcher_background),
+    Item("Apple Pine", 78.7, R.drawable.ic_launcher_background),
+    Item("Pen", 78.7, R.drawable.ic_launcher_background)
     )
 
 @Preview(showBackground = true)
